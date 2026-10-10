@@ -1,126 +1,143 @@
-# 🎬 Movie Recommender AI
+# Movie Recommender AI
 
-A web-based movie recommendation application that helps users discover movies and explore similar titles through an interactive interface.
+A web-based movie recommendation application built with Next.js and powered by a machine learning model through a FastAPI backend. The application allows users to explore movies and receive personalized movie recommendations based on their selected preferences.
 
-Built with **Next.js and React**, this project connects to a FastAPI backend to retrieve movie data and generate recommendations.
+## Live Demo
 
-## ✨ Features
+- **Website:** [Movie Recommender AI](PASTE_YOUR_VERCEL_URL_HERE)
+- **Backend API:** [Movie Recommender API](https://movie-recommender-api.fastapicloud.dev)
+- **API Documentation:** [Interactive API Docs](https://movie-recommender-api.fastapicloud.dev/docs)
 
-- **Movie Search** — Search for movies by title.
-- **Autocomplete Suggestions** — Get title suggestions while searching.
-- **Similar Movie Recommendations** — Discover movies related to a selected title.
-- **Movie Details** — Explore movie information through an interactive detail view.
-- **Responsive Interface** — Browse and discover movies through a clean, user-friendly interface.
+## Related Repository
 
-## 🛠️ Tech Stack
+- **Frontend:** [movie-recommender-ai](https://github.com/viany519/movie-recommender-ai)
+- **Backend:** [movie-recommender-api](https://github.com/viany519/movie-recommender-api)
+- **Machine Learning Model:** [Hugging Face Model](https://huggingface.co/viany519/movie-recommender-model)
+
+## Features
+
+- **Movie Recommendations** — Get movie recommendations by providing a movie title.
+- **Movie Exploration** — Access movie data through the backend API.
+- **Machine Learning Integration** — Connects to a machine learning model hosted on Hugging Face.
+- **API Integration** — Communicates with a FastAPI backend to retrieve movie data and recommendations.
+- **Responsive Web Interface** — Built with Next.js and React.
+
+## Tech Stack
 
 - **Framework:** Next.js
 - **Library:** React
 - **Language:** JavaScript
 - **Backend Integration:** FastAPI REST API
+- **Machine Learning:** Model hosted on Hugging Face
+- **Deployment:** Vercel
 
-## 🏗️ Architecture
+## Architecture
 
-The frontend communicates with the backend through HTTP requests.
+The application uses a frontend-backend architecture.
 
-```text
-User
-  │
-  ▼
-Next.js Frontend
-  │
-  │ HTTP Requests
-  ▼
-FastAPI Backend
-  │
-  ▼
-Movie Data & Recommendation Logic
-  │
-  ▼
-Recommended Movies
-```
+1. Users interact with the Next.js web interface.
+2. The frontend sends requests to the FastAPI backend.
+3. The backend processes requests and uses the movie recommendation model.
+4. The backend returns the results to the frontend for display.
 
-## 🔗 Project Links
-
-| Resource | Link |
-|---|---|
-| Backend Repository | [movie-recommender-api](https://github.com/viany519/movie-recommender-api) |
-| Live Backend API | [FastAPI Cloud](https://movie-recommender-api.fastapicloud.dev) |
-| API Documentation | [Swagger UI](https://movie-recommender-api.fastapicloud.dev/docs) |
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-Make sure you have installed:
+Make sure you have the following installed:
 
-- [Node.js](https://nodejs.org/)
+- Node.js
 - npm
+- Git
 
-### 1. Clone the repository
+### Installation
 
-```bash
-git clone https://github.com/viany519/movie-recommender-ai.git
-cd movie-recommender-ai
-```
+1. Clone the repository:
 
-If the application is located in a `frontend` directory, navigate into it:
+   ```bash
+   git clone https://github.com/viany519/movie-recommender-ai.git
+   ```
 
-```bash
-cd frontend
-```
+2. Navigate to the frontend directory:
 
-### 2. Install dependencies
+   ```bash
+   cd movie-recommender-ai/frontend
+   ```
 
-```bash
-npm install
-```
+3. Install the dependencies:
 
-### 3. Configure environment variables
+   ```bash
+   npm install
+   ```
 
-Create a `.env.local` file in the frontend application directory and add:
+4. Create a `.env.local` file in the frontend directory and configure the backend URL:
+
+   ```env
+   NEXT_PUBLIC_API_URL=https://movie-recommender-api.fastapicloud.dev
+   ```
+
+5. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+> If your frontend repository already opens directly at its root directory, run the commands there instead of entering the `frontend` folder.
+
+## Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the application for production |
+| `npm run start` | Start the production server |
+
+## Backend API
+
+The frontend communicates with the following endpoints:
+
+| Endpoint | Method | Description |
+|---|---|---|
+| `/` | GET | Check the API root response |
+| `/health` | GET | Check API health |
+| `/movies` | GET | Retrieve movie data |
+| `/recommend` | GET | Generate movie recommendations |
+
+See the [API documentation](https://movie-recommender-api.fastapicloud.dev/docs) for available parameters and response formats.
+
+## Deployment
+
+The frontend is deployed using Vercel. The backend is hosted separately using FastAPI Cloud.
+
+To configure the production frontend, set the following environment variable in your Vercel project settings:
 
 ```env
 NEXT_PUBLIC_API_URL=https://movie-recommender-api.fastapicloud.dev
 ```
 
-This variable specifies the URL of the deployed FastAPI backend.
+Redeploy the frontend after changing environment variables.
 
-### 4. Run the development server
+## Project Structure
 
-```bash
-npm run dev
-```
+The frontend is organized around a Next.js application, with pages and components responsible for the user interface and API communication.
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+The exact directory structure may vary depending on the current implementation.
 
-### 5. Build for production
+## Future Improvements
 
-```bash
-npm run build
-npm start
-```
+- Improve movie discovery and recommendation interfaces.
+- Add movie posters and detailed movie information.
+- Enhance recommendation quality and user experience.
+- Introduce user preferences and recommendation history.
 
-## 🌐 Deployment
+## Author
 
-The frontend can be deployed using a Next.js-compatible hosting platform, such as [Vercel](https://vercel.com/).
-
-Configure `NEXT_PUBLIC_API_URL` in the deployment environment variables to point to the deployed backend API.
-
-## 📌 Project Scope
-
-This project demonstrates frontend development, REST API integration, and the presentation of movie recommendation results through an interactive web application.
-
-The recommendation functionality depends on the availability and correct configuration of the backend service.
-
-## 👩‍💻 Author
-
-**Viany Leo**
-
-GitHub: [@viany519](https://github.com/viany519)
+Developed as a machine learning web application project.
 
 ---
 
-Part of the **Movie Recommender AI** project.
+**Explore the complete project:**
 
-For the recommendation API and backend implementation, visit the [backend repository](https://github.com/viany519/movie-recommender-api).
+[Frontend Repository](https://github.com/viany519/movie-recommender-ai) · [Backend Repository](https://github.com/viany519/movie-recommender-api) · [Hugging Face Model](https://huggingface.co/viany519/movie-recommender-model)
