@@ -134,7 +134,16 @@ The exact directory structure may vary depending on the current implementation.
 
 ## Author
 
-Developed as a machine learning web application project.
+**Maria Yohana Vianny Leo**
+
+Computer Science student at Bina Nusantara University with an interest in Data Science and Machine Learning.
+
+### Project Links
+
+- [GitHub Profile](https://github.com/viany519)
+- [Frontend Repository — Movie Recommender AI](https://github.com/viany519/movie-recommender-ai)
+- [Backend Repository — Movie Recommender API](https://github.com/viany519/movie-recommender-api)
+- [Hugging Face Model](https://huggingface.co/viany519/movie-recommender-model)
 
 ---
 
